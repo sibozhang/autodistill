@@ -41,12 +41,11 @@ def process_images(mode):
 
 # Define constants that are mode-independent
 # (These remain outside the function)
-BASE_PATH = "/mnt/data/sibo/GP45/202308/"
+BASE_PATH = "/mnt/data/sibo/GP45/202309/cabin"
 INPUT_FOLDER = os.path.join(BASE_PATH, 'images/')
-OUTPUT_FOLDER = os.path.join(BASE_PATH, 'dino_7class/')
+OUTPUT_FOLDER = os.path.join(BASE_PATH, 'dino_2class/')
 DATA_YAML_PATH = os.path.join(OUTPUT_FOLDER, 'data.yaml')
-# # 7 classes
-ontology_dict = {"person": "person", "car": "car", "truck": "truck", "cell phone": "cell phone", "Traffic cone": "cone", "helmet": "helmet", "machinery vehicle": "machinery vehicle"}
+ontology_dict = {"person": "person", "cell phone": "cell phone"}
 base_model = GroundingDINO(ontology=CaptionOntology(ontology_dict))
 
 # Run for both modes
@@ -61,13 +60,13 @@ process_images('val')
 # # BASE_PATH = "/mnt/data/sibo/GP45/20230517-0523/"
 # # BASE_PATH = "/mnt/data/sibo/GP45/20230524-0605/"
 # # BASE_PATH = "/mnt/data/sibo/GP45/20230606-0612/"
-# BASE_PATH = "/mnt/data/sibo/GP45/202308/"
+# BASE_PATH = "/mnt/data/sibo/GP45/202308/cabin"
 # # BASE_PATH = "/mnt/data/sibo/china_crane/north/"
 # # BASE_PATH = "/mnt/data/sibo/china_crane/south/"
 # # BASE_PATH = "/mnt/data/sibo/china_crane/shendong/"
 
 # INPUT_FOLDER = os.path.join(BASE_PATH, 'images/')
-# OUTPUT_FOLDER = os.path.join(BASE_PATH, 'dino_7class/')
+# OUTPUT_FOLDER = os.path.join(BASE_PATH, 'dino_2class/')
 # # INPUT_FOLDER = os.path.join(BASE_PATH, 'images_0.25fps/')
 # # OUTPUT_FOLDER = os.path.join(BASE_PATH, 'dino_4class/')
 # ANNOTATIONS_DIRECTORY_PATH = os.path.join(OUTPUT_FOLDER,  mode, 'labels')
@@ -86,8 +85,10 @@ process_images('val')
 # #          'payload', 'rigger', 'windbreaker', 'helmet', 'bar', # 10-14
 # #         'rope', 'barrier']  # 15 - 16
 # # Define ontology and initialize base model
+# # cabin 2 class
+# ontology_dict = {"person": "person", "cell phone": "cell phone"}
 # # 7 classes
-# ontology_dict = {"person": "person", "car": "car", "truck": "truck", "cell phone": "cell phone", "Traffic cone": "cone", "helmet": "helmet", "machinery vehicle": "machinery vehicle"}
+# # ontology_dict = {"person": "person", "car": "car", "truck": "truck", "cell phone": "cell phone", "Traffic cone": "cone", "helmet": "helmet", "machinery vehicle": "machinery vehicle"}
 # # # 15 classes
 # # ontology_dict = {"person": "person", "car": "car", "truck": "truck", "cell phone": "cell phone", "crawler crane": "crane", "cone": "cone", "hook": "hook", "shovel": "shovel", "payload": "payload", "helmet": "helmet", "bar": "bar", "rope": "rope", "barrier": "barrier"}
 # # 4 class: shendong
