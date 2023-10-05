@@ -129,3 +129,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+logs/label_visualize_parallel_2class_10063630.err
+logs/label_visualize_parallel_2class_10063630.out
+logs/label_visualize_parallel_8class_10063624.err
+logs/label_visualize_parallel_8class_10063624.out
+logs/label_visualize_parallel_8class_10063625.err
+logs/label_visualize_parallel_8class_10063625.out
+logs/label_visualize_parallel_8class_10063626.err
+logs/label_visualize_parallel_8class_10063626.out
+logs/label_visualize_parallel_8class_10063627.err
+logs/label_visualize_parallel_8class_10063627.out
